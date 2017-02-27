@@ -1,5 +1,5 @@
 # Snooch
-> It will snooch richt into your terminal prompt
+> It will snooch right into your terminal prompt
 
 <img src="screenshot.png" width="864">
 
