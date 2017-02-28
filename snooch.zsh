@@ -115,7 +115,7 @@ prompt_snooch_precmd() {
 prompt_snooch_preexec() {
 	# shows the current dir and executed command in the title when a process is active
 	print -Pn "\e]0;"
-	echo -nE "$PWD:t: $2"
+	print -PN "%~: $2"
 	print -Pn "\a"
 }
 
