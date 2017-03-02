@@ -88,22 +88,22 @@ prompt_snooch_precmd() {
 	prompt_snooch_preprompt="\n"
 
 	# username
-	prompt_snooch_preprompt+="%F{red}%n%%f "
+	prompt_snooch_preprompt+="%F{red}%n%f "
 
 	# hostname
 	prompt_snooch_preprompt+="at "
-	prompt_snooch_preprompt+="%F{yellow}$HOST%%f "
+	prompt_snooch_preprompt+="%F{yellow}$HOST%f "
 
 	# directory
 	prompt_snooch_preprompt+="in "
-	prompt_snooch_preprompt+="%F{green}%~%%f "
+	prompt_snooch_preprompt+="%F{green}%~%f "
 
 	# git status
 	if command git rev-parse --is-inside-work-tree &>/dev/null; then
 		branch=$(prompt_snooch_git_branch)
 		repo_status=$(prompt_snooch_git_repo_status)
 		prompt_snooch_preprompt+="on "
-		prompt_snooch_preprompt+="%F{blue}$branch $repo_status%%f "
+		prompt_snooch_preprompt+="%F{blue}$branch $repo_status%f "
 	fi
 
 	print -P $prompt_snooch_preprompt
@@ -155,7 +155,7 @@ prompt_snooch_nice_exit_code() {
 
 prompt_snooch_prompt() {
 	# red if the previous command didn't exit with 0
-	print "%(?.%F{green}.%F{red}$(prompt_snooch_nice_exit_code))❯%%f   "
+	print "%(?.%F{green}.%F{red}$(prompt_snooch_nice_exit_code))❯%f   "
 }
 
 prompt_snooch_setup() {
